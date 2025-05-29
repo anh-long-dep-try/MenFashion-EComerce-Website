@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signup.css">
+    <title>SignUp</title>
+</head>
+<body>
+    <script src="signup.js"></script>
+    <nav class="navigationWrapper">
+        <div class="logoWrapper">
+          <img src="/Images/suit_duck.jpg" alt="logo">
+        </div>
+
+        <ul class="navigation">
+            <li class="parent">
+                <a class="link" href="home.html">
+                    <img src="Images/home.png" alt="Home Icon"> Home
+                </a>
+            </li>
+            <li class="parent">
+                <a class="link" href="contact.html">
+                    <img src="Images/contact.png" alt="Contact Icon"> Contact
+                </a>
+            </li>
+            <li class="parent">
+                <a class="link" href="mycart.html">
+                    <img src="Images/cart.png" alt="Cart Icon"> My Cart
+                </a>
+            </li>
+        </ul>
+
+        <div class="searchWrapper">
+            <input type="text" class="searchBar" placeholder="Search...">
+            <button class="searchButton"><img src="Images/search.jpg" alt="" style="max-width: 20px;"></button>
+        </div>
+
+        
+        <ul class="navigation">
+            <li class="parent" id="signin">
+                <a class="link" href="signin.html">Sign In</a>
+            </li>
+            <li class="parent" id="signup">
+                <a class="link" href="signup.html" style="font-weight: bolder; font-size: larger; color: #d45c5c;">Sign Up</a>
+            </li>
+        </ul>
+    
+        
+        <div class="profileWrapper">
+            <a class="profileLink" href="profile.html"><img src="/Images/user.jpg" alt=""></a>
+        </div>
+      </nav>
+   <!-- ------------------------------------------------------------------------------------------------------ -->
+      <button class="hover-button" onclick="clearLocalStorage()">Clear All Data</button>
+
+      <div class="sign-up-container">
+        <div class="left-section">
+            <h2>Sign Up</h2>
+            <img src="Images/suit_duck.jpg" alt="Logo" class="logo">
+    
+            <form class="sign-up-form">
+                <!-- Username Field -->
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+    
+                <!-- Email Field -->
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+    
+                <!-- Password Field -->
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+    
+                <!-- Confirm Password Field -->
+                <div class="form-group">
+                    <input type="password" id="confirm-password" placeholder="Password" required>
+                </div>
+    
+                <!-- Sign Up Button -->
+                <button type="button" class="sign-up-button" onclick="validateForm()">Sign Up</button>
+            </form>
+        </div>
+        
+    
+        <div class="divider"></div>
+    
+        <div class="right-section">
+            <p style="text-align: center;">Or Sign In With</p>
+            <div class="social-icons">
+                <a href="https://facebook.com"><img src="/Images/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com"><img src="/Images/inta.png" alt="Instagram"></a>
+                <a href="https://x.com/__x"><img src="/Images/tweet.png" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/"><img src="Images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------- -->
+<footer>
+    <div class="footer-wrapper">
+        <div class="footer-section">
+            <h4>Company</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <h4>Online Shop</h4>
+            <ul>
+                <li><a href="#">Accessory</a></li>
+                <li><a href="#">Clothing</a></li>
+            </ul>
+        </div>
+
+        <!-- Get Help Section -->
+        <div class="footer-section">
+            <h4>Get Help</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Return</a></li>
+            </ul>
+        </div>
+
+        <!-- Follow Us Section -->
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://facebook.com"><img src="/Images/fb.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com"><img src="/Images/inta.png" alt="Instagram"></a>
+                <a href="https://x.com/__x"><img src="/Images/tweet.png" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/"><img src="Images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

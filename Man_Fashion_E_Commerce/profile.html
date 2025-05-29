@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <nav class="navigationWrapper">
+        <div class="logoWrapper">
+          <img src="/Images/suit_duck.jpg" alt="logo">
+        </div>
+
+        <ul class="navigation">
+            <li class="parent">
+                <a class="link" href="home.html">
+                    <img src="Images/home.png" alt="Home Icon"> Home
+                </a>
+            </li>
+            <li class="parent">
+                <a class="link" href="contact.html">
+                    <img src="Images/contact.png" alt="Contact Icon"> Contact
+                </a>
+            </li>
+            <li class="parent">
+                <a class="link" href="mycart.html">
+                    <img src="Images/cart.png" alt="Cart Icon"> My Cart
+                </a>
+            </li>
+        </ul>
+
+        <div class="searchWrapper">
+            <input type="text" class="searchBar" placeholder="Search...">
+            <button class="searchButton"><img src="Images/search.jpg" alt="" style="max-width: 20px;"></button>
+        </div>
+
+        
+        <ul class="navigation">
+            <li class="parent" id="signin">
+                <a class="link" href="signin.html">Sign In</a>
+            </li>
+            <li class="parent" id="signup">
+                <a class="link" href="signup.html">Sign Up</a>
+            </li>
+        </ul>
+    
+        
+        <div class="profileWrapper">
+            <a class="profileLink" href="profile.html"><img src="/Images/user.jpg" alt=""></a>
+        </div>
+      </nav>
+<!-- ----------------------------------------------------------------------------------------------------------- -->
+<div class="profile-container">
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <img src="Images/user.jpg" alt="User" class="user-icon">
+        <p class="username" style="padding-left: 70px;">user001</p>
+        <ul class="menu">
+            <li><a href=""></a><img src="Images/profile.png" alt="Profile Icon" class="menu-icon"> My Account</li>
+            <li class="active"><span style="padding-left: 30px;">Profile</span></li>
+            <li><img src="Images/cart.png" alt="Cart Icon" class="menu-icon"> My Cart</li>
+            <li> <span style="padding-left: 30px;">Change Password</span></li>
+            <li><img src="Images/order.png" alt="Order Icon" class="menu-icon"> Order</li>
+        </ul>
+    </div>
+
+    <!-- Profile Form -->
+    <div class="profile-form">
+        <h2>My Profile</h2>
+        <form>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" placeholder="user001" readonly>
+            </div>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Full Name">
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender-options">
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth</label>
+                <input type="date">
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</div>      
+    
+      <!-- ----------------------------------Footer------------------------------------------ -->
+      <footer>
+        <div class="footer-wrapper">
+            <!-- Company Section -->
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <h4>Online Shop</h4>
+                <ul>
+                    <li><a href="#">Accessory</a></li>
+                    <li><a href="#">Clothing</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Help Section -->
+            <div class="footer-section">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Return</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us Section -->
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><img src="/Images/fb.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com"><img src="/Images/inta.png" alt="Instagram"></a>
+                    <a href="https://x.com/__x"><img src="/Images/tweet.png" alt="Twitter"></a>
+                    <a href="https://www.linkedin.com/"><img src="Images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

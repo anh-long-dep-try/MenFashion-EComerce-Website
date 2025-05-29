@@ -1,0 +1,158 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="contact.css">
+        <title>Contact Page</title>
+    </head>
+    <body>
+
+        <nav class="navigationWrapper">
+            <div class="logoWrapper">
+              <img src="/Images/suit_duck.jpg" alt="logo">
+            </div>
+    
+            <ul class="navigation">
+                <li class="parent">
+                    <a class="link" href="home.html">
+                        <img src="Images/home.png" alt="Home Icon"> Home
+                    </a>
+                </li>
+                <li class="parent">
+                    <a class="link" href="contact.html" style="font-weight: bolder; font-size: larger;color: #d45c5c;">
+                        <img src="Images/contact.png" alt="Contact Icon"> Contact
+                    </a>
+                </li>
+                <li class="parent">
+                    <a class="link" href="mycart.html">
+                        <img src="Images/cart.png" alt="Cart Icon"> My Cart
+                    </a>
+                </li>
+            </ul>
+    
+            <div class="searchWrapper">
+                <input type="text" class="searchBar" placeholder="Search...">
+                <button class="searchButton"><img src="Images/search.jpg" alt="" style="max-width: 20px;"></button>
+            </div>
+    
+            
+            <ul class="navigation">
+                <li class="parent" id="signin">
+                    <a class="link" href="signin.html">Sign In</a>
+                </li>
+                <li class="parent" id="signup">
+                    <a class="link" href="signup.html">Sign Up</a>
+                </li>
+            </ul>
+        
+            
+            <div class="profileWrapper">
+                <a class="profileLink" href="profile.html"><img src="/Images/user.jpg" alt=""></a>
+            </div>
+          </nav>
+
+
+        <!-- ------------------------------------------------------------------------ -->
+        <div class="contact-container">
+            <h2>Contact Form</h2>
+    
+            <!-- Left Section (Form Fields) -->
+            <div class="contact-form">
+                <div class="left-section">
+                    <input type="text" placeholder="Full Name" class="input-field">
+                    <input type="text" placeholder="Phone Number" class="input-field">
+                    <input type="email" placeholder="Email" class="input-field">
+                    <textarea placeholder="Message" class="input-field message-field"></textarea>
+                    <button class="submit-button">Submit</button>
+                </div>
+    
+                <!-- Divider Line -->
+                <div class="divider"></div>
+    
+                <!-- Right Section (Contact Details with Icons) -->
+                <div class="right-section">
+                    <div class="contact-detail">
+                        <img src="Images/map.png" alt="Location" class="icon">
+                        <span>123 Street Name, City, Country</span>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="Images/email.png" alt="Location" class="icon">
+                        <span>daddyduck@fashion.com</span>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="Images/contact.png" alt="Location" class="icon">
+                        <span>(123) 456-7890</span>
+                    </div>
+                    <div class="contact-detail">
+                        <img src="Images/website.png" alt="Location" class="icon">
+                        <span>www.daddyduck.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Function to check if all fields are filled and display a message
+            function validateAndSubmit() {
+                const fullName = document.querySelector('input[placeholder="Full Name"]');
+                const phoneNumber = document.querySelector('input[placeholder="Phone Number"]');
+                const email = document.querySelector('input[placeholder="Email"]');
+                const message = document.querySelector('textarea[placeholder="Message"]');
+        
+                // Check if all fields are filled
+                if (fullName.value && phoneNumber.value && email.value && message.value) {
+                    alert("Thanks for contacting us. Hope you enjoy your shopping!");
+                            window.location.href = "home.html";
+                } else {
+                    alert("Please fill in all fields before submitting.");
+                }
+            }
+        
+            document.querySelector('.submit-button').addEventListener('click', function(event) {
+                event.preventDefault(); 
+                validateAndSubmit(); // Call validation function
+            });
+        </script>  
+        
+        <!-- ----------------------------------Footer------------------------------------------ -->
+      <footer>
+        <div class="footer-wrapper">
+            <!-- Company Section -->
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <h4>Online Shop</h4>
+                <ul>
+                    <li><a href="#">Accessory</a></li>
+                    <li><a href="#">Clothing</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Help Section -->
+            <div class="footer-section">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Return</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us Section -->
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><img src="/Images/fb.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com"><img src="/Images/inta.png" alt="Instagram"></a>
+                    <a href="https://x.com/__x"><img src="/Images/tweet.png" alt="Twitter"></a>
+                    <a href="https://www.linkedin.com/"><img src="Images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </body>
+    </html>

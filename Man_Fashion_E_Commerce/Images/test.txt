@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form Validation</title>
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2>Simple Form with Validation</h2>
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br><br>
+
+        <label for="password">Password (min 6 characters):</label><br>
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    
+    <p id="error-message" class="error"></p>
+
+    <script>
+        function validateForm() {
+            // Clear any previous error message
+            document.getElementById("error-message").innerText = "";
+
+            // Get form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Check if all fields are filled
+            if (name === "" || email === "" || password === "") {
+                document.getElementById("error-message").innerText = "All fields are required.";
+                return false;
+            }
+
+            // Email pattern to validate email format
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("error-message").innerText = "Please enter a valid email address.";
+                return false;
+            }
+
+            // Password length check
+            if (password.length < 6) {
+                document.getElementById("error-message").innerText = "Password must be at least 6 characters.";
+                return false;
+            }
+
+            // If everything is valid, return true to allow form submission
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>

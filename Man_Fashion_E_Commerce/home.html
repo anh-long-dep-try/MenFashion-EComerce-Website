@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <nav class="navigationWrapper">
+        <div class="logoWrapper">
+          <img src="/Images/suit_duck.jpg" alt="logo">
+        </div>
+
+        <ul class="navigation">
+            <li class="parent">
+                <a class="link" href="home.html" style="font-weight: bolder; font-size: larger; color: #d45c5c;">
+                    <img src="Images/home.png" alt="Home Icon"> Home
+                </a>
+            </li>
+            <li class="parent">
+                <a class="link" href="contact.html">
+                    <img src="Images/contact.png" alt="Contact Icon"> Contact
+                </a>
+            </li>
+            <li class="parent">
+                <a class="link" href="mycart.html">
+                    <img src="Images/cart.png" alt="Cart Icon"> My Cart
+                </a>
+            </li>
+        </ul>
+
+        <div class="searchWrapper">
+            <input type="text" class="searchBar" placeholder="Search...">
+            <button class="searchButton"><img src="Images/search.jpg" alt="" style="max-width: 20px;"></button>
+        </div>
+
+        
+        <ul class="navigation">
+            <li class="parent" id="signin">
+                <a class="link" href="signin.html">Sign In</a>
+            </li>
+            <li class="parent" id="signup">
+                <a class="link" href="signup.html">Sign Up</a>
+            </li>
+        </ul>
+    
+        
+        <div class="profileWrapper">
+            <a class="profileLink" href="profile.html"><img src="/Images/user.jpg" alt=""></a>
+        </div>
+      </nav>
+
+
+      <!-- Carousel -->
+      
+      <div class="slider-container">
+        <div class="slider" id="slider">
+          <img src="Images/banner4.webp" alt="Banner 4">
+          <img src="Images/banner6.webp" alt="Banner 6">
+          <img src="Images/banner5.webp" alt="Banner 5">
+          <img src="Images/banner7.webp" alt="Banner 5">
+          <img src="Images/banner8.webp" alt="Banner 5">
+
+        </div>
+        <div class="slider-dots">
+          <span class="dot active" onclick="setSlide(0)"></span>
+          <span class="dot" onclick="setSlide(1)"></span>
+          <span class="dot" onclick="setSlide(2)"></span>
+        </div>
+      </div>
+    
+      <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slider img');
+        const totalSlides = slides.length;
+    
+        function setSlide(index) {
+          currentIndex = index;
+          updateSlider();
+        }
+    
+        function updateSlider() {
+          const slider = document.getElementById('slider');
+          const slideWidth = slides[0].clientWidth;
+          slider.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+    
+          // Update active dot
+          document.querySelectorAll('.dot').forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentIndex);
+          });
+        }
+    
+        function autoSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateSlider();
+        }
+    
+        setInterval(autoSlide, 3000);
+      </script>
+      <!-- -------------------------------Contents--------------------------------------------- -->
+      <main>
+        <section class="category">
+            <h2>Men Must Have</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="Product/ao_len.png" alt="Sweater">
+                    <h3>Sweater</h3>
+                    <p class="description">Warm, stylish men's sweater for everyday wear.</p>
+                    <p class="price">$49.99</p>
+                    <button class="add-to-cart" onclick="addToCart('1','Sweater', 49.99,'ao_len.png')">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Product/polo_tshirt.png" alt="Polo T-shirt">
+                    <h3>Polo T-shirt</h3>
+                    <p class="description">Classic, comfortable men's polo t-shirt for casual style.</p>
+                    <p class="price">$39.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Polo T-shirt', 39.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Product/shirt.png" alt="Shirt">
+                    <h3>Shirt</h3>
+                    <p class="description">Sleek, contemporary men's shirt for a polished look.</p>
+                    <p class="price">$49.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Shirt', 49.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Product/short_sleeve_shirt.png" alt="Short Sleeve Shirt">
+                    <h3>Short Sleeve Shirt</h3>
+                    <p class="description">Breezy, casual men's short-sleeve shirt for warm weather.</p>
+                    <p class="price">$49.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Short Sleeve Shirt', 49.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Product/shorts.png" alt="Shorts">
+                    <h3>Shorts</h3>
+                    <p class="description">Comfortable, versatile men's shorts for everyday wear.</p>
+                    <p class="price">$29.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Shorts', 29.99)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    
+        <section class="category">
+            <h2>Accessory</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="Product/bag.webp" alt="Bag">
+                    <h3>Bag</h3>
+                    <p class="description">A brief description of the product goes here.</p>
+                    <p class="price">$69.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Bag', 69.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Product/bracelet.webp" alt="Bracelet">
+                    <h3>Bracelet</h3>
+                    <p class="description">A brief description of the product goes here.</p>
+                    <p class="price">$24.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Bracelet', 24.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Product/Groomsmen.webp" alt="Groomsmen">
+                    <h3>Groomsmen</h3>
+                    <p class="description">A brief description of the product goes here.</p>
+                    <p class="price">$34.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Groomsmen', 34.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Product/necklage.webp" alt="Necklage">
+                    <h3>Necklage</h3>
+                    <p class="description">A brief description of the product goes here.</p>
+                    <p class="price">$19.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Necklage', 19.99)">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="Product/rings.webp" alt="Rings">
+                    <h3>Rings</h3>
+                    <p class="description">A brief description of the product goes here.</p>
+                    <p class="price">$19.99</p>
+                    <button class="add-to-cart" onclick="addToCart('Rings', 19.99)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    
+      <!-- ----------------------------------Footer------------------------------------------ -->
+      <footer>
+        <div class="footer-wrapper">
+            <!-- Company Section -->
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <h4>Online Shop</h4>
+                <ul>
+                    <li><a href="#">Accessory</a></li>
+                    <li><a href="#">Clothing</a></li>
+                </ul>
+            </div>
+
+            <!-- Get Help Section -->
+            <div class="footer-section">
+                <h4>Get Help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Return</a></li>
+                </ul>
+            </div>
+
+            <!-- Follow Us Section -->
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><img src="/Images/fb.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com"><img src="/Images/inta.png" alt="Instagram"></a>
+                    <a href="https://x.com/__x"><img src="/Images/tweet.png" alt="Twitter"></a>
+                    <a href="https://www.linkedin.com/"><img src="Images/linkedin.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
